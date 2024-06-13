@@ -8,21 +8,25 @@ import { dataBooks } from "../utils/data";
 <section class="flex flex-wrap gap-3 md:gap-10">
   {
     dataBooks.map(({ titulo, portada, autor, slug }) => (
-      <a href={`/detalles/${slug}`}>
-        <article class="w-[175px] md:w-[200px] cursor-pointer">
-          <img
-            src={portada}
-            alt={titulo}
-            class="rounded-md w-[180px] h-[280px] md:w-[200px] md:h-[300px] mx-auto"
-            width="200"
-            height="300"
-          />
-          <h2 class="font-bold text-xl text-balance py-2 capitalize">
-            {titulo}
-          </h2>
-          <span class="text-neutral-300">{autor} </span>
-        </article>
-      </a>
+      <article class="w-[175px] md:w-[200px]">
+        <img
+          src={portada}
+          alt={titulo}
+          class="rounded-md w-[180px] h-[280px] md:w-[200px] md:h-[300px] mx-auto"
+          width="200"
+          height="300"
+        />
+        <h2 class="font-bold text-xl text-balance py-2 capitalize truncate">
+          {titulo}
+        </h2>
+        <span class="text-neutral-300">{autor} </span>
+        <a
+          href={`/detalles/${slug}`}
+          class="flex w-full border-white/20 border justify-center my-2 rounded-lg py-1 active:scale-95 transition-all hover:bg-white/5"
+        >
+          Ver Detalles
+        </a>
+      </article>
     ))
   }
 </section>
