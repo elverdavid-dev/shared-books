@@ -16,11 +16,13 @@ import { dataBooks } from "../utils/data";
           width="200"
           height="300"
         />
-        <h2 class="font-bold text-lg text-balance py-2 capitalize">{titulo}</h2>
+        <h2 class="font-bold text-lg text-balance py-2 capitalize truncate">
+          {titulo}
+        </h2>
         <span class="text-neutral-300">{autor} </span>
         <a
           href={`/detalles/${slug}`}
-          class="flex w-full border-white/20 border justify-center my-2 rounded-lg py-1 active:scale-95 transition-all hover:bg-white/5"
+          class="flex w-full border-white/20 border justify-center my-2 rounded-lg py-1 active:scale-95 transition-all hover:bg-white/10"
         >
           Ver Detalles
         </a>
