@@ -1,4 +1,7 @@
 ---
+import { ViewTransitions } from "astro:transitions";
+import "@fontsource-variable/onest";
+import Navbar from "../components/navbar.astro";
 interface Props {
 	title: string;
 }
@@ -14,43 +17,52 @@ const { title } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<!-- Title -->
+		<meta property="og:title" content="Libro muchas vidas, muchos maestros" />
 		<meta
-		property="og:title"
-		content="Libro muchas vidas, muchos maestros"
-		/>
-		<meta
-		property="twitter:title"
-		content="Libro muchas vidas, muchos maestros"
+			property="twitter:title"
+			content="Libro muchas vidas, muchos maestros"
 		/>
 		<title>{title}</title>
-
+		<ViewTransitions />
 		<!-- Description -->
-		<meta name="description" content="Una lectura que despierta la mente y el alma, dejando una impresión perdurable en quienes se sumergen en sus páginas." />
-		<meta property="og:description" content="Una lectura que despierta la mente y el alma, dejando una impresión perdurable en quienes se sumergen en sus páginas." />
-		<meta property="twitter:description" content="Una lectura que despierta la mente y el alma, dejando una impresión perdurable en quienes se sumergen en sus páginas." />
+		<meta
+			name="description"
+			content="Una lectura que despierta la mente y el alma, dejando una impresión perdurable en quienes se sumergen en sus páginas."
+		/>
+		<meta
+			property="og:description"
+			content="Una lectura que despierta la mente y el alma, dejando una impresión perdurable en quienes se sumergen en sus páginas."
+		/>
+		<meta
+			property="twitter:description"
+			content="Una lectura que despierta la mente y el alma, dejando una impresión perdurable en quienes se sumergen en sus páginas."
+		/>
 
-		 <!-- Metadata images -->
+		<!-- Metadata images -->
 
-		 <meta
-		 property="og:image"
-		 content="https://shared-books.vercel.app/og-image.jpg"
-	 />
-	 <meta
-		 property="twitter:image"
-		 content="https://shared-books.vercel.app/og-image.jpg"
-	 />
-		
+		<meta
+			property="og:image"
+			content="https://shared-books.vercel.app/og-image.jpg"
+		/>
+		<meta
+			property="twitter:image"
+			content="https://shared-books.vercel.app/og-image.jpg"
+		/>
 	</head>
-	<body>
+	<body class="relative">
 		<div
-			class="absolute top-0 z-[-2] h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"
+			class="absolute inset-0 min-h-screen z-[-2] w-full bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"
 		>
 		</div>
-		<slot />
+		<Navbar />
+		<main class="mx-auto container px-4 md:px-0">
+			<slot />
+		</main>
+		<style is:global>
+			html {
+				font-family: "Onest Variable", sans-serif, system-ui;
+				color: white;
+			}
+		</style>
 	</body>
 </html>
-<style is:global>
-	html {
-		font-family: system-ui, sans-serif;
-	}
-</style>

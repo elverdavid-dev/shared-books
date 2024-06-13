@@ -1,28 +1,24 @@
 ---
+import { Image } from "astro:assets";
+import bookIcon from "../assets/book.webp";
+import Card from "../components/card.astro";
 import Layout from "../layouts/Layout.astro";
-import DownloadIcon from "../icons/DownloadIcon.astro";
 ---
 
 <Layout title="Libro muchas vidas, muchos maestros">
-	<main
-		class="flex items-center flex-col justify-center text-white max-w-3xl mx-auto"
-	>
-		<h1
-			class="mt-32 text-3xl lg:text-6xl font-bold text-center py-4 text-balance"
-		>
-			Muchas vidas, muchos maestros
-		</h1>
-		<p class="text-pretty text-gray-300 px-5 lg:px-0 text-center">
-			Libro escrito por el psiquiatra <strong>Brian Weiss</strong>, que relata sus experiencias
-			con una paciente llamada Catherine durante sesiones de terapia de
-			regresión a vidas pasadas. A medida que Catherine se sumerge en estados de
-			trance, comienza a recordar experiencias de vidas anteriores que parecen
-			tener un impacto significativo en su vida actual.
-		</p>
-		<a href="/Muchas-vidas-muchos-maestros.pdf" download
-			class="mt-10 px-16 py-5 rounded-2xl bg-gradient-to-r from-violet-800 to-violet-700 active:scale-95 transition-all flex items-center gap-x-2 cursor-pointer"
-			>Descargar
-			<DownloadIcon />
-		</a>
-	</main>
+	<section class="md:mx-10 pb-10">
+		<div class="md:flex md:items-center md:gap-x-2 pb-5">
+			<h1 class="font-bold text-center text-2xl md:text-3xl md:text-start">
+				La lectura enriquece el alma y nutre la mente
+			</h1>
+			<Image
+				src={bookIcon}
+				alt="icon book"
+				width="60"
+				height="60"
+				class="mx-auto md:mx-0"
+			/>
+		</div>
+		<Card />
+	</section>
 </Layout>

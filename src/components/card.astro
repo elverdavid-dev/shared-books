@@ -1,0 +1,28 @@
+---
+import { dataBooks } from "../utils/data";
+---
+
+<h3 class="text-end py-3 text-lg text-gray-300">
+  <strong class="text-white">{dataBooks.length}</strong> Libros totales
+</h3>
+<section class="flex flex-wrap gap-5 md:gap-10">
+  {
+    dataBooks.map(({ titulo, portada, autor, slug }) => (
+      <a href={`/detalles/${slug}`}>
+        <article class="w-[180px] md:w-[200px] cursor-pointer">
+          <img
+            src={portada}
+            alt={titulo}
+            class="rounded-md w-[180px] h-[280px] md:w-[200px] md:h-[300px] mx-auto"
+            width="200"
+            height="300"
+          />
+          <h2 class="font-bold text-xl text-balance py-2 capitalize">
+            {titulo}
+          </h2>
+          <span class="text-neutral-300">{autor} </span>
+        </article>
+      </a>
+    ))
+  }
+</section>

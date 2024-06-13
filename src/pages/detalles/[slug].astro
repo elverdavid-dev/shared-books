@@ -1,0 +1,54 @@
+---
+import type { GetStaticPaths } from "astro";
+import BackButton from "../../components/backButton.astro";
+import DownloadIcon from "../../icons/DownloadIcon.astro";
+import Layout from "../../layouts/Layout.astro";
+import { getBookBySlug } from "../../services/get-book-by-slug";
+import { dataBooks } from "../../utils/data";
+
+// Generá los parametros de manera estatica
+export const getStaticPaths = (() => {
+  return dataBooks.map(({ slug }) => {
+    return {
+      params: { slug },
+    };
+  });
+}) satisfies GetStaticPaths;
+
+const { slug } = Astro.params;
+
+const book = getBookBySlug(slug);
+---
+
+<Layout title=`${book?.titulo}`>
+  <BackButton />
+  <main class="md:flex md:justify-between gap-x-5 md:max-w-3xl mx-auto">
+    <img
+      src={book?.portada}
+      alt={book?.titulo}
+      width="200"
+      height="400"
+      class="rounded-md w-[220px] h-[350px] mx-auto md:mx-0"
+    />
+    <article class="py-5 md:py-0">
+      <h1 class="text-3xl font-bold">{book?.titulo}</h1>
+      <span class="text-gray-300">{book?.autor} </span>
+      <div class="py-2">
+        <span class="font-semibold text-lg">Sinopsis</span>
+        <p class="text-gray-300 text-pretty leading-relaxed">
+          {book?.sinopsis}
+        </p>
+      </div>
+      <div class="flex justify-end">
+        <a
+          href={book?.url}
+          download
+          class="bg-emerald-500 py-3 px-4 rounded-xl flex items-center gap-x-1 my-3"
+        >
+          Descargar
+          <DownloadIcon />
+        </a>
+      </div>
+    </article>
+  </main>
+</Layout>
