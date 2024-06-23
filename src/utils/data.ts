@@ -89,4 +89,28 @@ export const dataBooks: Book[] = [{
   autor: "Morgan Housel",
   slug: "como-piensan-los-ricos"
 },
+{
+  titulo: "Muchos cuerpos, una misma alma ",
+  sinopsis: 'En este libro, Weiss explora la idea de la reencarnación y el viaje del alma a través de múltiples vidas. A través de sus experiencias con pacientes, el autor presenta casos donde la terapia de regresión ha ayudado a las personas a superar traumas, fobias y problemas emocionales al recordar y procesar experiencias de vidas pasadas.',
+  url: "/books/muchos-cuerpos-una-misma-alma.pdf",
+  portada: `${baseUrl}/vs3h05jxptd6twsqub2r`,
+  autor: "Brian weiss",
+  slug: "muchos-cuerpos-una-misma-alma"
+},
+{
+  titulo: "Deja de ser tú ",
+  sinopsis: '"Deja de ser tú" es un libro del Dr. Joe Dispenza que explora cómo podemos transformar nuestras vidas al cambiar nuestros pensamientos y emociones. Utilizando principios de neurociencia y meditación, Dispenza enseña cómo reprogramar el cerebro para romper hábitos y creencias limitantes, permitiéndonos crear una nueva realidad y alcanzar nuestro máximo potencial.',
+  url: "/books/deja-de-ser-tu.pdf",
+  portada: `${baseUrl}/eepiz7ctlvjotdzuiort`,
+  autor: "Joe dispenza",
+  slug: "deja-de-ser-tu"
+},
+{
+  titulo: "El alqumista",
+  sinopsis: '"El Alquimista" de Paulo Coelho es una novela que narra la historia de Santiago, un joven pastor andaluz que sueña con encontrar un tesoro escondido en las pirámides de Egipto. A lo largo de su viaje, Santiago encuentra varios personajes que le enseñan valiosas lecciones sobre la vida y la importancia de seguir sus sueños. La novela destaca temas como el destino, la espiritualidad y la búsqueda de la propia leyenda personal, inspirando a los lectores a perseguir sus aspiraciones más profundas.',
+  url: "/books/el-alquimista.pdf",
+  portada: `${baseUrl}/hxn5vmzfglqswuanc9ls`,
+  autor: "Paulo Coelho",
+  slug: "el-alquimista"
+},
 ]

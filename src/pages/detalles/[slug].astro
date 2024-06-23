@@ -2,6 +2,7 @@
 import type { GetStaticPaths } from "astro";
 import BackButton from "../../components/backButton.astro";
 import DownloadIcon from "../../icons/DownloadIcon.astro";
+import UserIcon from "../../icons/userCircleIcon.astro";
 import Layout from "../../layouts/Layout.astro";
 import { getBookBySlug } from "../../services/get-book-by-slug";
 import { dataBooks } from "../../utils/data";
@@ -32,7 +33,10 @@ const book = getBookBySlug(slug);
     />
     <article class="py-5 md:py-0">
       <h1 class="text-3xl font-bold">{book?.titulo}</h1>
-      <span class="text-gray-300">{book?.autor} </span>
+      <span class="text-emerald-500 flex items-center gap-x-1">
+        <UserIcon />
+        {book?.autor}
+      </span>
       <div class="py-2">
         <span class="font-semibold text-lg">Sinopsis</span>
         <p class="text-gray-300 text-pretty leading-relaxed">
