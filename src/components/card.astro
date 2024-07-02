@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 import { dataBooks } from "../utils/data";
 ---
 
@@ -10,9 +11,10 @@ import { dataBooks } from "../utils/data";
     dataBooks.map(({ titulo, portada, autor, slug }) => (
       <a href={`/detalles/${slug}`}>
         <article class="w-[175px] md:w-[200px] group">
-          <img
-            src={portada}
+          <Image
+            src={portada ?? ""}
             alt={titulo}
+            loading={"eager"}
             class="rounded-md w-[180px] h-[280px] md:w-[200px] md:h-[300px] mx-auto group-hover:scale-[1.04] transition-all"
             width="200"
             height="300"
