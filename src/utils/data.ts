@@ -113,4 +113,12 @@ export const dataBooks: Book[] = [{
   autor: "Paulo Coelho",
   slug: "el-alquimista"
 },
+{
+  titulo: "Viajes fuera del cuerpo",
+  sinopsis: 'Libro escrito por Robert A. Monroe que explora las experiencias fuera del cuerpo del autor. Monroe, un exitoso ejecutivo de radio, comienza a experimentar fenómenos inexplicables que lo llevan a desarrollar la capacidad de viajar más allá de su cuerpo físico. A través de sus viajes, Monroe descubre nuevas dimensiones de la realidad y ofrece un relato detallado de sus aventuras, aportando una perspectiva única sobre la conciencia, la vida después de la muerte y la naturaleza del ser. El libro es considerado un clásico en el campo de la metafísica y los estudios sobre la conciencia.',
+  url: "/books/viajes-fuera-del-cuerpo.pdf",
+  portada: `${baseUrl}/d2uz55c4bskwjv4ao10w`,
+  autor: "Robert A. Monroe ",
+  slug: "viajes-fuera-del-cuerpo"
+},
 ]
