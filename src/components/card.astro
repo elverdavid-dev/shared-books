@@ -1,28 +1,28 @@
 ---
 import { Image } from "astro:assets";
-import { dataBooks } from "../utils/data";
+import { dataBooks } from "@/utils/data";
 ---
 
 <h3 class="text-end py-3 text-lg text-gray-300">
-  <strong class="text-white">{dataBooks.length}</strong> Libros totales
+  <strong>{dataBooks.length}</strong> libros totales
 </h3>
-<section class="flex flex-wrap gap-3 md:gap-10">
+<section class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 justify-items-center gap-5 md:gap-y-10">
   {
     dataBooks.map(({ titulo, portada, autor, slug }) => (
       <a href={`/detalles/${slug}`}>
-        <article class="w-[175px] md:w-[200px] group">
+        <article class="group md:w-[200px]">
           <Image
             src={portada ?? ""}
             alt={titulo}
             loading={"eager"}
-            class="rounded-md w-[180px] h-[280px] md:w-[200px] md:h-[300px] mx-auto group-hover:scale-[1.04] transition-all image"
+            class="rounded-md w-[200px] h-[300px] image-animate object-cover"
             width="200"
-            height="300"
+            height="230"
           />
-          <h2 class="font-bold text-lg text-balance py-2 capitalize truncate group-hover:text-emerald-500 transition-all">
+          <h3 class="font-bold text-lg text-balance capitalize group-hover:text-blue-500 transition-all line-clamp-1 pt-1">
             {titulo}
-          </h2>
-          <span class="text-neutral-300">{autor} </span>
+          </h3>
+          <span class="text-neutral-400 text-sm">{autor} </span>
         </article>
       </a>
     ))
