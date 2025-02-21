@@ -21,6 +21,15 @@ export const dataBooks: Book[] = [
 		slug: "muchas-vidas-muchos-maestros",
 	},
 	{
+		titulo: "Anatomia del espiritu",
+		sinopsis:
+			"En Anatomia del Espíritu, Caroline Myss explora cómo el espíritu puede influir en nuestra vida y cómo podemos utilizarlo para mejorar nuestra salud y nuestra vida. Utilizando principios de neurociencia y técnicas de meditación, Myss enseña cómo reprogramar el cerebro para alcanzar un estado de conciencia más alto y crear una vida más saludable, productiva y significativa.",
+		url: "/books/anatomia-del-espiritu.pdf",
+		portada: `${baseUrl}/cxxfeckukoousgnwlaro`,
+		autor: "Caroline Myss",
+		slug: "anatomia-del-espiritu",
+	},
+	{
 		titulo: "Ser feliz en alaska",
 		sinopsis:
 			"En Ser Feliz en Alaska, Rafael Santandreu ofrece una guía práctica para transformar nuestra mente y alcanzar la felicidad sin importar las circunstancias externas. Basado en la psicología cognitiva, el libro enseña a reprogramar nuestros pensamientos y creencias para eliminar el sufrimiento innecesario y desarrollar una mente resiliente y positiva. A través de ejemplos y ejercicios, Santandreu muestra cómo cualquier persona puede aprender a ser feliz, incluso en situaciones tan extremas como vivir en Alaska.",
